@@ -16,7 +16,7 @@ version = providers.gradleProperty("pluginVersion").get()
 
 // Set the JVM language level used to build the project.
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
 }
 
 // Configure project's dependencies
@@ -136,6 +136,11 @@ tasks {
 
     publishPlugin {
         dependsOn(patchChangelog)
+    }
+
+    jar {
+        from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
 }
 
