@@ -1,51 +1,30 @@
 # metis-code
 
-![Build](https://github.com/SIugnur/metis-code/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+基于 Metis 实现的 IntelliJ AI 辅助编程插件。
 <!-- Plugin description end -->
 
-## Installation
+## 关于项目
 
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "metis-code"</kbd> >
-  <kbd>Install</kbd>
-  
-- Using JetBrains Marketplace:
+本项目是基于 Metis 框架实现的 IntelliJ AI 辅助编程插件。该插件旨在提升开发者的编程效率，通过集成人工智能技术，为 IntelliJ 平台用户提供更加智能、便捷的编码体验。
 
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
+### 功能特性
+- 支持 Metis 对话
+- 智能代码补全：根据上下文提供精准的代码建议
+- 代码优化建议：提供代码重构和性能优化
+- 多语言支持：支持多种主流编程语言的智能辅助
 
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+## 安装与使用
+当前插件因公司原因不进行开源且上线至插件市场，如需使用，请自行下载安装。
+我会定时打包好 jar 包，并发布，如果没有你想要的版本，请自行打包或联系作者。
+### 打包步骤
+1. 确保已安装 Java 开发工具包 (JDK)。
+2. 根据自身 IDE 的版本，设置 ./gradle.properties 文件中的 `pluginSinceBuild` 和 `pluginUntilBuild` 参数，详情查看 [官方说明](https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html)
+3. 点击 IDE 右侧的 `Gradle` -> `Tasks` -> `build` -> `build` 按钮进行打包。
+4. 查找并保存生成的 ./build/libs/metis-code-xxx-instrumented.jar 文件。
+5. 打开你要安装改插件的 IDE，点开 `setting` -> `Plugins` -> `Install plugin from disk` 按钮，选择 jar 文件进行安装。
 
-- Manually:
 
-  Download the [latest release](https://github.com/SIugnur/metis-code/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
-
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+## 联系作者
+如有任何问题或建议，欢迎通过以下方式联系作者：
+- 邮箱: [sunrungui@foxmail.com](mailto:sunrungui@foxmail.com)
