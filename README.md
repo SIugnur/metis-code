@@ -8,6 +8,13 @@
 
 本项目是基于 Metis 框架实现的 IntelliJ AI 辅助编程插件。该插件旨在提升开发者的编程效率，通过集成人工智能技术，为 IntelliJ 平台用户提供更加智能、便捷的编码体验。
 
+### 插件界面
+<div style="display: flex; gap: 10px;">
+  <img alt="img.png" src="img.png" width="200"/>
+  <img alt="img_1.png" src="img_1.png" width="200"/>
+  <img alt="img_2.png" src="img_2.png" width="200"/>
+</div>
+
 ### 功能特性
 - 支持 Metis 对话
 - 智能代码补全：根据上下文提供精准的代码建议
