@@ -1,0 +1,35 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.siugnur.MetisCode</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>MetisCode</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="sunrungui@foxmail.com" url="https://www.yourcompany.com">SIugnur</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>MetisCode 插件，基于 Metis 大语言模型开发的智能代码生成工具，帮助开发人员快速生成代码。</description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.siugnur.metiscode.window.MetisWindowFactory" id="Metis" anchor="right" />
+    </extensions>
+    <actions>
+        <group id="MetisToolPopupMenuGroup" popup="true" text="Metis 工具">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </group>
+        <action id="OptimizedCodeId" class="com.siugnur.metiscode.action.GenerateCode" text="代码生成">
+            <add-to-group group-id="MetisToolPopupMenuGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
