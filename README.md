@@ -1,12 +1,12 @@
 # metis-code
 
 <!-- Plugin description -->
-基于 Metis 实现的 IntelliJ AI 辅助编程插件。
+基于 Metis 实现的 IntelliJ AI 辅助编程插件，需要公司个人账号登录。
 <!-- Plugin description end -->
 
 ## 关于项目
 
-本项目是基于 Metis 框架实现的 IntelliJ AI 辅助编程插件。该插件旨在提升开发者的编程效率，通过集成人工智能技术，为 IntelliJ 平台用户提供更加智能、便捷的编码体验。
+本项目是基于 Metis 实现的 IntelliJ AI 辅助编程插件。该插件旨在提升开发者的编程效率，通过集成人工智能技术，为 IntelliJ 平台用户提供更加智能、便捷的编码体验。
 
 ### 插件界面
 <div style="display: flex; gap: 10px;">
