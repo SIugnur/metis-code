@@ -32,7 +32,8 @@ public class MetisMainForm {
     private JTextArea inputArea;
     private JTabbedPane tabbedPane;
     private JScrollPane setting;
-    private JScrollPane chat;
+    public JScrollPane chatWin;
+    public JPanel chat;
     private JPanel msgListPanel;
 
     public MetisMainForm() {
@@ -81,9 +82,9 @@ public class MetisMainForm {
                 for (Message message : currentSession.getMsgList()) {
                     addMessageItemPanel(message);
                 }
-                JScrollBar bar = chat.getVerticalScrollBar();
+                JScrollBar bar = chatWin.getVerticalScrollBar();
                 bar.setValue(bar.getMaximum());
-                chat.repaint();
+                chatWin.repaint();
             }
         });
         setting.setViewportView(new SettingForm().getForm());
@@ -95,7 +96,7 @@ public class MetisMainForm {
         JPanel wrapperPanel = new JPanel(new BorderLayout());
         wrapperPanel.add(msgListPanel, BorderLayout.NORTH);
         wrapperPanel.add(Box.createVerticalGlue()); // 把消息顶上去
-        chat.setViewportView(wrapperPanel);
+        chatWin.setViewportView(wrapperPanel);
 
         instance = this;
         init();
@@ -185,10 +186,10 @@ public class MetisMainForm {
 
     // 在添加消息后调用滚动方法
     public void scrollToBottom() {
-        chat.revalidate();
-        chat.repaint();
+        chatWin.revalidate();
+        chatWin.repaint();
         Timer timer = new Timer(50, e -> {
-            JScrollBar verticalBar = chat.getVerticalScrollBar();
+            JScrollBar verticalBar = chatWin.getVerticalScrollBar();
             verticalBar.setValue(verticalBar.getMaximum());
         });
         timer.setRepeats(false);

@@ -7,6 +7,7 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.EditorFactory;
 import com.intellij.openapi.editor.SelectionModel;
+import com.intellij.ui.Gray;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.components.JBScrollPane;
 import com.intellij.util.ui.JBUI;
@@ -261,7 +262,7 @@ public class MessageItemPanel extends JPanel {
         codeTextPane.setEditable(false);
         codeTextPane.setText(actualCodeContent);
         codeTextPane.setBackground(Color.decode("#2b2b2b"));
-        codeTextPane.setForeground(Color.WHITE);
+        codeTextPane.setForeground(Gray._255);
 
         JScrollPane codeScrollPane = new JBScrollPane(codeTextPane);
         codeScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
