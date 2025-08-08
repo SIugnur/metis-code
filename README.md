@@ -27,9 +27,9 @@
 ### 打包步骤
 1. 确保已安装 Java 开发工具包 (JDK)。
 2. 根据自身 IDE 的版本，设置 ./gradle.properties 文件中的 `pluginSinceBuild` 和 `pluginUntilBuild` 参数，详情查看 [官方说明](https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html)
-3. 点击 IDE 右侧的 `Gradle` -> `Tasks` -> `build` -> `build` 按钮进行打包。
-4. 查找并保存生成的 ./build/libs/metis-code-xxx-instrumented.jar 文件。
-5. 打开你要安装改插件的 IDE，点开 `setting` -> `Plugins` -> `Install plugin from disk` 按钮，选择 jar 文件进行安装。
+3. 点击 IDE 右侧的 `Gradle` -> `Tasks` -> `IntelliJ Platform` -> `buildPlugin` 按钮进行打包。
+4. 查找并保存生成的 ./build/distributions/metis-code-xxx.zip 文件。
+5. 打开你要安装改插件的 IDE，点开 `setting` -> `Plugins` -> `Install plugin from disk` 按钮，选择 zip 文件进行安装。
 
 
 ## 联系作者
